@@ -15,30 +15,31 @@ TODO: Change the background color for each device
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
   <title>Media Query</title>
   <style>
-    body {
-      background-color: aquamarine;
-    }
-
-    @media (max-widths:480px) {
+    @media (max-width: 480px) {
       body {
         background-color: lightsalmon;
+        /* Mobile Devices */
       }
     }
 
-    @media (max-widths:1200px) {
+    @media (min-width: 481px) and (max-width: 1200px) {
       body {
         background-color: powderblue;
+        /* Tablets */
       }
     }
 
-    @media (max-widths:1600px) {
+    @media (min-width: 1201px) and (max-width: 1600px) {
       body {
         background-color: limegreen;
+        /* Laptops */
       }
     }
-    @media (max-widths:1601px) {
+
+    @media (min-width: 1601px) {
       body {
         background-color: seagreen;
+        /* Desktops */
       }
     }
   </style>
