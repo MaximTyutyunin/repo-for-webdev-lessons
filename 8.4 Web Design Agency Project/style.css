@@ -6,21 +6,101 @@ body {
   flex-direction: column;
   min-height: 95vh;
 }
+
 .main {
   flex: 1;
+
 }
 
-.highlight{
-  color:midnightblue;
-  font-weight:bolder;
+.highlight {
+  color: midnightblue;
+  font-weight: bolder;
 }
+
+.left {
+  display: flex;
+  flex-direction: row;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.card-description {
+  margin-top: 0;
+  padding: 1rem;
+  padding-top: 0px;
+}
+
+.tile-image {
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+  object-fit: cover;
+  /* Ensures the image fills the area without distortion */
+}
+
 h1 {
   font-size: 5rem;
-  font-weight:normal;
+  font-weight: normal;
+  max-width: 40%;
 }
+
 
 footer {
   text-align: right;
   color: midnightblue;
 }
 
+p {
+  font-size: 1.5rem;
+}
+
+@media (min-width:680px) and (max-width: 1204px) {
+  .left {
+    
+    flex-direction: column;
+  }
+  
+  .right {
+     flex-direction: column;
+  }
+  
+  .cards {
+        flex-direction: row;
+  
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: normal;
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 679px) {
+  .left {
+    flex-direction: column;
+  }
+
+  .right {
+    flex-direction: column;
+  }
+
+  .cards {
+    flex-direction: column;
+
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: normal;
+    max-width: 40%;
+  }
+}
