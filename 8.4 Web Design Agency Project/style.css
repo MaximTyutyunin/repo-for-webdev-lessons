@@ -43,7 +43,7 @@ body {
   width: 100%;
   max-width: 20rem;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
   /* Ensures the image fills the area without distortion */
 }
 
@@ -65,23 +65,27 @@ p {
 
 @media (min-width:680px) and (max-width: 1204px) {
   .left {
-    
+
     flex-direction: column;
   }
-  
+
   .right {
-     flex-direction: column;
+    flex-direction: column;
   }
-  
+
   .cards {
-        flex-direction: row;
-  
+    flex-direction: row;
+
   }
 
   h1 {
     font-size: 3.5rem;
     font-weight: normal;
     max-width: 40%;
+  }
+
+  p {
+    font-size: 1rem;
   }
 }
 
@@ -98,9 +102,14 @@ p {
     flex-direction: column;
 
   }
+
   h1 {
     font-size: 2rem;
     font-weight: normal;
     max-width: 40%;
+  }
+
+  p {
+    font-size: 1rem;
   }
 }
