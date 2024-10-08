@@ -121,6 +121,7 @@ const soundMap = {
 
 // Play sound function
 function playSound(key) {
+  playAnimation(key);
   const soundFile = soundMap[key];
   if (soundFile) {
       const audio = new Audio(soundFile);
@@ -131,18 +132,20 @@ function playSound(key) {
 // Handle both keydown and click events
 document.addEventListener('keydown', function(event) {
   playSound(event.key.toLowerCase());
+  //playAnimation(event.key.toLowerCase());
 });
 
 document.querySelectorAll('button').forEach(button => {
   button.addEventListener('click', function() {
-      const key = this.getAttribute('data-key');
+      const key = this.innerHTML;//this.getAttribute('data-key'); --> HTML should look like this <button class="w drum" data-key="w">w</button>
       playSound(key);
+      //playAnimation(key);
   });
 });
 
 function playAnimation(key){
   let activeButton = document.querySelector("." + key);
-  activeButton.classList.add(".pressed");
+  activeButton.classList.add("pressed");
 
   setTimeout(function() {
     activeButton.classList.remove("pressed");
